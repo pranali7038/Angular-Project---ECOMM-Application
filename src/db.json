@@ -1,0 +1,56 @@
+{
+  "seller": [
+    {
+      "id": "9d63",
+      "name": "Pranali Jahagirdar",
+      "email": "pranali@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "faaf",
+      "name": "rushh",
+      "email": "rushh@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "445b",
+      "data": {
+        "name": "tonny",
+        "password": "123",
+        "email": "tonny@gmail.com"
+      }
+    },
+    {
+      "id": "d36b",
+      "data": {
+        "name": "tonny",
+        "password": "123",
+        "email": "tonny@gmail.com"
+      }
+    },
+    {
+      "id": "7e24",
+      "data": {
+        "name": "tonny",
+        "password": "123",
+        "email": "tonny@gmail.com"
+      }
+    },
+    {
+      "id": "5601",
+      "data": {
+        "name": "peter",
+        "password": "123",
+        "email": "peter@gmail.com"
+      }
+    },
+    {
+      "id": "0b1b",
+      "data": {
+        "name": "bruce1",
+        "password": "123",
+        "email": "bruce@gmail.com"
+      }
+    }
+  ]
+}
