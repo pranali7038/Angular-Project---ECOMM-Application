@@ -13,14 +13,13 @@ import { SignUp } from '../data-type';
 })
 export class SellerAuth {
 
-  constructor(private seller:Seller,private router:Router){}
+  constructor(private seller:Seller){}
+
+  ngOnInit():void{
+    this.seller.reloadSeller()
+  }
 
   signUp(data:SignUp):void{
-    this.seller.userSignUp(data).subscribe((result)=>{
-        if(result){
-          this.router.navigate(['seller-home'])
-        }
-        
-    });
+    this.seller.userSignUp(data);
   }
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { SellerAuth } from './seller-auth/seller-auth';
 import { SellerHome } from './seller-home/seller-home';
+import { authGuard } from './auth-guard';
 
 
 export const routes: Routes = [
@@ -11,7 +12,8 @@ export const routes: Routes = [
     },
     {
         path:'seller-auth',
-        component:SellerAuth
+        component:SellerAuth,
+        canActivate:[authGuard]
     },
     {
         path:'seller-home',
