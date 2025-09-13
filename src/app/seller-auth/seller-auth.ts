@@ -15,6 +15,7 @@ import { NgIf } from '@angular/common';
 export class SellerAuth {
 
   showLogin = false
+  authError:string ='';
   constructor(private seller:Seller){}
 
   ngOnInit():void{
@@ -25,8 +26,13 @@ export class SellerAuth {
     this.seller.userSignUp(data);
   }
   Login(data:SignUp):void{
-    console.log(data);
-    
+    this.seller.userLogin(data)
+    this.seller.isLoginError.subscribe((isError)=>{
+      if(isError){
+        this.authError="Email or pasword is not correct"
+      }
+      
+    })
   }
 
   openLogin(){
