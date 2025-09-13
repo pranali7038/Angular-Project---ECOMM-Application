@@ -59,6 +59,12 @@
         "password": "123",
         "email": "pranali@email.com"
       }
+    },
+    {
+      "id": "fbfd",
+      "name": "pranali jahagirdar",
+      "password": "123",
+      "email": "pranali@email.com"
     }
   ]
 }

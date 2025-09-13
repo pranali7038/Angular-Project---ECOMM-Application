@@ -13,10 +13,11 @@ export const routes: Routes = [
     {
         path:'seller-auth',
         component:SellerAuth,
-        canActivate:[authGuard]
+        
     },
     {
         path:'seller-home',
-        component:SellerHome
+        component:SellerHome,
+        canActivate:[authGuard]
     }
 ];
