@@ -1,6 +1,7 @@
 import { CommonModule} from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { RouterLink,Router} from '@angular/router';
+import { Seller } from '../services/seller';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { RouterLink,Router} from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
+  sellerName:string ="";
   menuType:string = "default"
   constructor(private route:Router){}
 
@@ -17,7 +19,9 @@ export class Header {
       if(val.url){
         
         if(localStorage.getItem('seller') && val.url.includes('seller')){
-          console.log("this is seller area");
+          let sellerStore = localStorage.getItem('seller');
+          let sellerData = sellerStore && JSON.parse(sellerStore);
+          this.sellerName = sellerData.name;
           this.menuType = "seller";
           
         }else{
@@ -26,7 +30,12 @@ export class Header {
         }
       } 
       
-    })
+    });
+  }
+
+  Logout(){
+    localStorage.removeItem('seller');
+    this.route.navigate(["/"])
   }
 
 }
